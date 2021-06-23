@@ -2,12 +2,12 @@ require('dotenv').config();
 
 module.exports = {
   development: {
-    username: 'Gojo Satoru',
-    password: 'n32uk0ch4n301',
+    username: 'Gojo\ Satoru',
+    password: 'n32uk0ch4n3016',
     database: 'blog_crud',
     host: '127.0.0.1',
     dialect: 'mysql',
-    use_env_variable: 'DEV_DATABASE_URL'
+    use_env_variable: process.env.DEV_DATABASE_URL
   },
   test: {
     username: 'root',
