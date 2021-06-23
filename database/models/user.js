@@ -48,11 +48,11 @@ module.exports = (sequelize, DataTypes) =>{
   User.beforeCreate(async (user) => {
       user = await user.generatedPasswordHash();
   });
-  User.prototype.generatedPasswordHash=function () {
+  User.prototype.generatedPasswordHash = function () {
     if (this.password) {
       return bcrypt.hash(this.password, 10);
     }
-  }
+  };
   // define relationship a user has many posts
   User.associate = function (models) {
     // associate can be defined in here

@@ -23,6 +23,6 @@ module.exports = gql`
         id:Int!
         title: String!
         content:String!
-        createdAt:String
+        createdAt:String!
     }
 `;
